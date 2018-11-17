@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_drugs_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/background_light"
+    tools:context=".mydrugs.MyDrugsFragment">
+
+    <EditText
+            android:id="@+id/search_drugs_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:hint="@string/search_drug_or_substance"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:singleLine="true"
+            app:layout_constraintEnd_toStartOf="@+id/search_drugs_button"
+            app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+            android:id="@+id/search_drugs_button"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="false"
+            android:clickable="true"
+        android:focusable="true"
+            android:cropToPadding="false"
+        android:src="@drawable/ic_action_search"
+        android:tint="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/search_drugs_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/search_drugs_text"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_drugs_text"/>
+
+    <TextView
+        android:id="@+id/textview_background"
+        style="@style/Base.Theme.MaterialComponents.BackgroundText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/type_drug_or_substance_first"
+        android:typeface="normal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_drugs_text" />
+
+    <com.iitr.kaishu.nsidedprogressbar.NSidedProgressBar
+            android:id="@+id/progress_indicator"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            app:nsidedProg_baseSpeed="5"
+            app:nsidedProg_sideCount="3"
+            app:nsidedProg_clockwise="true"
+            app:nsidedProg_primaryColor="@color/colorPrimary"
+            app:nsidedProg_secondaryColor="@color/colorAccent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/search_drugs_text" android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

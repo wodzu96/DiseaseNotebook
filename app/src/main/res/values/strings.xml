@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Disease Notebook</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="my_drugs">My Drugs</string>
+    <string name="search_drugs">Search drugs</string>
+    <string name="drug_details">Drug details</string>
+    <string name="dialog_exit_title">Close DrugSafe</string>
+    <string name="dialog_exit_body">Are You sure You want to quit?</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="search_drug_or_substance">Search for drug or substance</string>
+    <string name="type_drug_or_substance_first">Type a name or substance to search drugs database</string>
+    <string name="find_replacement_drugs">Find replacement drugs</string>
+    <string name="no_drugs_saved">No drugs saved, use search tab to find them</string>
+    <string name="save_drug">Save drug</string>
+    <string name="delete_drug">Delete drug</string>
+    <string name="session_expired">Session expired</string>
+    <string name="view_in_browser">View in browser</string>
+    <string name="manual">Manual:</string>
+    <string name="permission_error">Permission error</string>
+    <string name="download_manual">Download manual</string>
+    <string name="download_started_by_drugsafe">Download started by DrugSafe</string>
+
+    <!-- Fragment tags -->
+    <string name="fragment_tag_mydrugs" translatable="false">MyDrugsFragment</string>
+    <string name="fragment_tag_searchdrugs" translatable="false">SearchDrugsFragment</string>
+    <string name="fragment_tag_drugdetails" translatable="false">DrugDetailsFragment</string>
+    <string name="fragment_tag_replacementslist" translatable="false">ReplacementListFragment</string>
+    <string name="fragment_tag_scanbarcode" translatable="false">BarcodeScannerFragment</string>
+    <string name="fragment_tag_savedrug" translatable="false">SaveDrugFragment</string>
+
+    <!-- SharedPreferences Keys -->
+    <string name="sp_key_auth_token" translatable="false">auth_token</string>
+    <string name="sp_key_user_email" translatable="false">user_email</string>
+
+    <!-- Field names -->
+    <string name="registration">Registration</string>
+    <string name="register">Register</string>
+    <string name="signin">Sign in</string>
+    <string name="signout">Sign out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="replacements">Replacements</string>
+    <string name="other">Other</string>
+    <string name="settings">Settings</string>
+    <string name="scan_barcode">Scan barcode</string>
+    <!-- Success strings -->
+    <string name="success_registration">You have registered successfully. You can now log in.</string>
+
+    <!-- Error strings -->
+    <string name="error">Error</string>
+    <string name="error_email_invalid">Email address is invalid</string>
+    <string name="error_password_too_short">Password is too short</string>
+    <string name="error_password_email_not_matching">Password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_email_taken">This email address is already taken. If it is Yours, try logging in.</string>
+    <string name="error_server_offline">Server is currently offline, please try again later.</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
+    <string name="error_connection_failed">Connecting to server failed. Check Your internet connection and try again.
+    </string>
+    <string name="error_internal_server_error">An internal server error has occurred. Please try again.</string>
+    <string name="error_drug_query_too_short">Please enter at least 3 characters</string>
+    <string name="error_no_drugs_found">No drugs found</string>
+    <string name="error_ean_not_correct">Scanned code is not assigned to any known drug. Either the barcode is malformed, or drug has been removed from stores.</string>
+    <string name="error_session_expired">Your session token has expired. Please, log in again.</string>
+    <string name="error_camera_permission_denied">You have denied access to device camera. Without camera permission, this app can\'t begin scan. </string>
+    <string name="error_storage_permission_denied">You have denied access to device storage. Without device permission, this app can\'t download manuals.</string>
+    <string name="disease_name">Nazwa choroby</string>
+    <string name="disease_condition">Przebieg choroby</string>
+    <string name="durgs">Użyte leki:</string>
+    <string name="start_date">Data rozpoczęcia choroby:</string>
+    <string name="finishDate">Data zakończenia choroby:</string>
+    <string name="delete_disease">Usuń wpis</string>
+    <string name="edit_disease">Edytuj wpis</string>
+    <string name="save_disease">Zapisz wpis</string>
+</resources>

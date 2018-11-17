@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="drug_model_fields">
+        <item>id</item>
+        <item>name</item>
+        <item>commonName</item>
+        <item>drugType</item>
+        <item>ammountOfSubstance</item>
+        <item>type</item>
+        <item>owner</item>
+        <item>procedureType</item>
+        <item>permissionNumber</item>
+        <item>permissionExpiry</item>
+        <item>atc</item>
+        <item>substances</item>
+    </string-array>
+
+    <string-array name="drug_model_fields_full">
+        <item>ID</item>
+        <item>Drug Name</item>
+        <item>Substance Name</item>
+        <item>Drug Type</item>
+        <item>Amount of Active Substance</item>
+        <item>Type</item>
+        <item>Owner</item>
+        <item>Procedure Type</item>
+        <item>Permission Number</item>
+        <item>Permission Expiry</item>
+        <item>ATC</item>
+        <item>Substances</item>
+    </string-array>
+</resources>

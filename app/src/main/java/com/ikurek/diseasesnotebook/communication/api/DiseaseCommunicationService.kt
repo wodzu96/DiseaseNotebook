@@ -20,5 +20,5 @@ interface DiseaseCommunicationService {
     fun patchDiseases(@Header("Authorization") token: String, @Path("id") id: Int, @Body diseasePost: DiseasePostAPI): Call<Any>
 
     @DELETE("/api/entries/{id}")
-    fun deleteDisease(@Header("Authorization") token: String, @Path("id") id: Int): Call<Any>
+    fun deleteDisease(@Header("Authorization") token: String, @Path("id") id: Int): Call<Void>
 }

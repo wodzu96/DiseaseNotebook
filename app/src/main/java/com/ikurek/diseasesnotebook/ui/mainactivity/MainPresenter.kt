@@ -7,6 +7,7 @@ import com.ikurek.diseasesnotebook.R
 import com.ikurek.diseasesnotebook.base.BaseApp
 import com.ikurek.diseasesnotebook.communication.api.DiseaseCommunicationService
 import com.ikurek.diseasesnotebook.communication.api.model.DiseaseAPI
+import com.ikurek.diseasesnotebook.communication.model.DiseaseModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -43,21 +44,27 @@ class MainPresenter : MainContract.Presenter {
 
     private fun getDiseases() {
         val token = sharedPreferences.getString(context.getString(R.string.sp_key_auth_token), "")
-        diseaseCommunicationService.getDiseases(token!!).enqueue(object : Callback<List<DiseaseAPI>> {
-            override fun onFailure(call: Call<List<DiseaseAPI>>, t: Throwable) {
-                Log.i("Failure", t.message)
-            }
+        diseaseCommunicationService.getDiseases(token!!)
+            .enqueue(object : Callback<List<DiseaseAPI>> {
+                override fun onFailure(call: Call<List<DiseaseAPI>>, t: Throwable) {
+                    Log.i("Failure", t.message)
+                }
 
-            override fun onResponse(
-                call: Call<List<DiseaseAPI>>,
-                response: Response<List<DiseaseAPI>>
-            ) {
-                if (response.code() == 200) {
-                    response.body()?.let {
-                        view?.showDiseasesList(it.map { it.toDiseaseModel() })
+                override fun onResponse(
+                    call: Call<List<DiseaseAPI>>,
+                    response: Response<List<DiseaseAPI>>
+                ) {
+                    when (response.code()){
+                        200 -> {
+                            response.body()?.let {
+                                view?.showDiseasesList(it.map { it.toDiseaseModel() })
+                            }
+                        }
+                        404 -> {
+                            view?.showDiseasesList(emptyList())
+                        }
                     }
                 }
-            }
-        })
+            })
     }
 }

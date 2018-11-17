@@ -98,25 +98,17 @@ class DiseaseDetailsPresenter : DiseaseDetailsContract.Presenter {
 
     override fun deleteDisease(id: Int) {
         val token = sharedPreferences.getString(context.getString(R.string.sp_key_auth_token), "")
-        diseaseCommunicationService.deleteDisease(token!!, id).enqueue(object : Callback<Any> {
-            override fun onFailure(call: Call<Any>, t: Throwable) {
-                Log.i("Failure", t.message)
-                Log.i("AAAA", call.request().toString())
-                Log.i("AAAA", call.request().body().toString())
-                Log.i("AAAA", call.request().headers().toString())
+        diseaseCommunicationService.deleteDisease(token!!, id).enqueue(object : Callback<Void> {
+            override fun onFailure(call: Call<Void>, t: Throwable) {
 
             }
 
             override fun onResponse(
-                call: Call<Any>,
-                response: Response<Any>
+                call: Call<Void>,
+                response: Response<Void>
             ) {
                 if (response.code() == 200) {
-                    response.body()?.let {
-                        view?.close()
-                    }
-                } else {
-                    Log.d("AAAA", "${response.code()}, ${response.body()}")
+                    view?.close()
                 }
             }
         })
